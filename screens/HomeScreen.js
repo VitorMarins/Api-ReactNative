@@ -7,7 +7,7 @@ import styles from '../styles/HomeScreenStyles';
 const HomeScreen = ({ navigation }) => {
   const handleNumSubmit = async (num) => {
     try {
-      const numberInfo = await fetchNumberInfo(number(num));
+      const numberInfo = await fetchNumberInfo(num);
       navigation.navigate('Result', { numberInfo });
     } catch (error) {
       alert('Erro vegano ao buscar informação');
